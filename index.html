@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+        </form> 
+
+    
+   
+<div id="demo">
+
+    <p id="datePanel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque totam magni obcaecati porro sequi distinctio id autem explicabo dolore iusto facilis, odit saepe sapiente earum, numquam accusantium veniam! Quae, doloribus.</p>
+    <h1 id="titleclass">Welcome</h1>
+   
+   
+
+</div>
+<input type="button" value="Add Border" onclick='document.getElementById("titleclass").style.border = "solid 2px RED"'>
+
+<input type="button" id="NewText" value="Add New Text" >
+
+<!-- <img id="mainpic" src="./images/a.jpg"> -->
+<p class="parclass">Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+<p id="newPar"></p>
+
+
+
+
+
+ <script>
+
+
+
+
+function ChangeTxt()
+{
+    document.getElementById("titleclass").innerHTML = "Welcome to all";
+    document.getElementById("titleclass").style.color = "red";
+}
+
+document.getElementById("NewText").addEventListener("click", ChangeTxt);
+
+
+document.getElementById("mainpic").src = "./images/wallpapers.jpg";
+
+document.getElementById("datePanel").innerHTML = Date();
+
+let FormValue = document.forms["myForm"]["fname"].value;
+
+
+let result = document.getElementById("demo").childNodes[0].nodeValue;
+console.log(result)
+
+// console.log(document.getElementById("demo").firstChild.nodeValue)
+
+document.getElementById("newPar").innerHTML = result;
+
+
+
+
+
+// if(FormValue == "")
+// {
+//     alert("Please Enter your firstname")
+    
+//     console.log("Please Enter your firstname")
+// }
+
+
+</script> 
+    
+
+     <!-- <script src="./js/myscript.js"></script> -->
+   
+</body>
+</html>
